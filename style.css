@@ -1,0 +1,222 @@
+
+/* General Body Styling with Background Image */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif; /* Sad and melancholic serif font */
+    background-image: url('1.jpg'); /* Set your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure the body covers the full height of the screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Container Styling */
+.container, .main-content {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box;
+    margin: 40px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.4); /* Transparent background */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Button Styling with Glow Effect */
+button.glow-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #2196f3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(33, 150, 243, 0.6);
+}
+
+button.glow-button:hover {
+    background-color: #64b5f6;
+    box-shadow: 0 0 25px rgba(33, 150, 243, 1), 0 0 15px rgba(33, 150, 243, 0.7);
+}
+
+/* Front Page Specific Theme */
+.rip-theme {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    color: #0d47a1;
+    font-family: 'Playfair Display', serif;
+    background-image: url('bg.jpg');
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Great Vibes', cursive; /* Script-style font */
+    color: #01579b; /* Blue color */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Playfair Display', serif; /* Sad, reflective font */
+}
+
+/* Main Page Specific Theme */
+.celebration-theme {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    color: #01579b;
+}
+
+/* Photo Frame with Glowing Effect */
+.photo-frame {
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    border: 10px solid #42a5f5;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.glow-frame {
+    box-shadow: 0 0 20px rgba(66, 165, 245, 0.8);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Message Styling */
+.message {
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.6); /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery-frame {
+    width: 100px; /* Set width for the frames */
+    height: 100px; /* Set height for the frames */
+    margin: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-frame:hover {
+    transform: scale(1.05); /* Slightly enlarge the frame on hover */
+}
+
+.gallery-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the frame without distortion */
+}
+
+/* Expanded Gallery Styling */
+.expanded-gallery {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it overlays other content */
+}
+
+.expanded-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 95%;
+    max-height: 95%;
+    overflow: auto; /* Allow scrolling if content is too large */
+}
+
+.expanded-content img {
+    width: 320px; /* Set width for expanded images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Space between images */
+}
+
+/* Close Button Styling */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color: #01579b; /* Blue text color */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair Display', serif; /* Consistent font */
+    border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+footer p {
+    font-size: 10px; /* Change this value to adjust text size */
+}
+
+.outline {
+    font-size: 16px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-color: #01579b;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+}
+
+.outline p{
+    font-size: 12px;
+}
