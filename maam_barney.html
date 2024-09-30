@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="2.jpg">
+    <!-- Internal CSS for the loading screen -->
+    <style>
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: #fff;
+        }
+
+        .loading-face {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #loading-screen h1 {
+            font-size: 40px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Great Vibes', cursive;
+            color: #01579b;
+        }
+
+        #loading-screen p {
+            font-size: 10px;
+            margin-bottom: 15px;
+            line-height: 0.5;
+            font-family: 'Playfair Display', serif;
+            color: #01579b;
+        }
+    </style>
+</head>
+<body class="celebration-theme">
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img src="2.jpg" alt="Loading..." class="loading-face">
+        <h1>Loading...</h1>
+        <p>PANGIT PO KASI INTERNET NIYO.</p>
+    </div>
+
+    <div class="container" style="display: none;" id="main-content">
+        <h1>Happy Teacher's Day, Ma'am Bernadette! 🕊️</h1>
+        <p>iyak ka muna ma'am bago mo basahin para mala MMK</p>
+        <div class="photo-frame glow-frame">
+            <img src="2.jpg" alt="Teacher's Photo">
+        </div>
+        <button id="play-music-button" class="glow-button">I-tap mo po muna 'to for music at para ganap na ganap 🕊️</button>
+        
+        <h1>Dear ma'am Bernadette,</h1>           
+        <p>Happy Teacher's Day po ma'am!! (no more jokes muna) I want to take this special day to thank you for everything na ginawa mo po para sa'min. You have been an amazing teacher po! like kahit 'lagi ka po naming kinukupal, okay lang po sa'yo at sinasabayan niyo po kami. Kahit po yung lessons niyo minsan kunti lang yung interested since napilitan lang din mag ICT yung iba, nagagawan mo parin po ng way para maging masaya yung class at maging interested yung iba.</p>
+        
+        <p>To show my appreciation, ginawa ko po 'tong website just for you kasi wala po akong magawa sa buhay. Nag-effort po talaga ako sa paggawa nito ma'am, para lang po makupal ka. Itong website po talaga is para kupalin ka na may kunting pa-thank you sa patience, guidance, and support mo HAHAHAHA</p>
+        
+        <p>I hope po na 'tong website na 'to makes you feel as special as you are to us. Thank you po again sa pagiging pinakamabait at maganda na teacher, kasing ganda mo po 'pag naging 90%+ yung grades ko sa major.</p>
+        
+        <p>#goodstudent, Darwin</p>
+       
+        <!-- Photo Gallery Section -->        
+        <div class="outline">
+            <h2 class="message">Barney and Friends pics</h2>
+            <div class="gallery">
+                <!-- 10 Frames for Pictures -->
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="3.jpg" alt="Photo 1">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo2.jpg" alt="Photo 2">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo3.jpg" alt="Photo 3">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo4.jpg" alt="Photo 4">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo5.jpg" alt="Photo 5">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo6.jpg" alt="Photo 6">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo7.jpg" alt="Photo 7">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo8.jpg" alt="Photo 8">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo9.jpg" alt="Photo 9">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this)">
+                    <img src="photo10.jpg" alt="Photo 10">
+                </div>
+            </div>
+
+            <!-- Expanded Gallery View (Hidden by default) -->
+            <div id="expanded-gallery" class="expanded-gallery" onclick="closeGallery()">
+                <span class="close">&times;</span>
+                <div class="expanded-content">
+                    <!-- Additional Images for the Expanded View -->
+                    <img src="3.jpg" alt="Expanded Photo 1">
+                    <img src="photo2.jpg" alt="Expanded Photo 2">
+                    <img src="photo3.jpg" alt="Expanded Photo 3">
+                    <img src="photo4.jpg" alt="Expanded Photo 4">
+                    <img src="photo5.jpg" alt="Expanded Photo 5">
+                    <img src="photo6.jpg" alt="Expanded Photo 6">
+                    <img src="photo7.jpg" alt="Expanded Photo 7">
+                    <img src="photo8.jpg" alt="Expanded Photo 8">
+                    <img src="photo9.jpg" alt="Expanded Photo 9">
+                    <img src="photo10.jpg" alt="Expanded Photo 10">
+                </div>
+            </div>
+        </div>
+        
+        <p class="message">We deeply appreciate everything you’ve done for us. You make the world a better place with your kindness, wisdom, and unwavering support. Here's to more years of teaching and inspiring future generations!</p>
+        
+        <!-- Gifts Section -->
+        <div class="outline">
+            <h2 class="message">MGA GIFTS KO PO PALA SA'YO MA'AM💙:</h2>
+            <p>pictures nalang po muna, wala pang budget eh HAHAHAHA</p>
+            <div class="gallery">
+                <!-- Frames for Gift Pictures -->
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="printer.jpg" alt="Printer">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="bondpaper.jpg" alt="Bond Paper">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="laptop.jpg" alt="Laptop">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="cake.jpg" alt="Cake">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="manok.jpg" alt="Manok">
+                </div>
+                <div class="gallery-frame" onclick="expandGallery(this, 'gift')">
+                    <img src="milktea.jpg" alt="Milk Tea">
+                </div>
+            </div>            
+
+            <!-- Expanded Gallery View for Gifts (Hidden by default) -->
+            <div id="expanded-gift-gallery" class="expanded-gallery" onclick="closeGallery('gift')">
+                <span class="close">&times;</span>
+                <div class="expanded-content">
+                    <!-- Additional Images for the Expanded Gift View -->
+                    <img src="printer.jpg" alt="Expanded Printer">
+                    <img src="bondpaper.jpg" alt="Expanded Bond Paper">
+                    <img src="laptop.jpg" alt="Expanded Laptop">
+                    <img src="cake.jpg" alt="Expanded Cake">
+                    <img src="manok.jpg" alt="Expanded Manok">
+                    <img src="milktea.jpg" alt="Expanded Milk Tea">      
+                </div>
+            </div>
+        </div>
+
+        <p class="message">Mahal ka po namin ma'am! Thank you for being an incredible teacher! Have a wonderful Teacher's Day! 💙</p>
+    </div>
+
+    <footer>
+        <p>Created by Darwin Pogi | Greetings from all of the ICT - A&C</p>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script>
+        // Function to expand the gallery
+        function expandGallery(element, type) {
+            const expandedGallery = type === 'gift' ? document.getElementById('expanded-gift-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "flex";
+        }
+
+        // Function to close the gallery
+        function closeGallery(type) {
+            const expandedGallery = type === 'gift' ? document.getElementById('expanded-gift-gallery') : document.getElementById('expanded-gallery');
+            expandedGallery.style.display = "none";
+        }
+
+        // Function to play background music
+        document.getElementById('play-music-button').addEventListener('click', function() {
+            const music = document.getElementById('background-music');
+            music.play();
+        });
+
+        // Hide the main content initially and then display it after a delay
+        window.onload = function() {
+            // Hide loading screen after 2 seconds
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block'; // Show main content
+            }, 2000); // Change the delay time as needed
+        };
+    </script>
+</body>
+    </html>
