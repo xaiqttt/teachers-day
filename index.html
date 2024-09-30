@@ -79,24 +79,23 @@
 
     <!-- Internal JavaScript -->
     <script>
-        // Make sure the loading screen hides after page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const loadingScreen = document.getElementById('loading-screen');
-            const mainContent = document.getElementById('main-content');
+    document.addEventListener('DOMContentLoaded', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
 
-            // Check if the page is fully loaded
-            window.addEventListener('load', function() {
-                // Hide the loading screen and show the main content
-                loadingScreen.style.display = 'none';
-                mainContent.style.display = 'block';
-            });
+        // Check if the page is fully loaded
+        window.addEventListener('load', function() {
+            // Hide the loading screen and show the main content
+            loadingScreen.style.display = 'none';
+            mainContent.style.display = 'block';
         });
 
-        // Add event listener to the button for redirection
-        document.getElementById('revealButton').addEventListener('click', function() {
-            // Redirect to the main.html page
-            window.location.href = 'main.html';
-        });
+        // Fallback: In case the load event fails or is delayed, hide after 5 seconds
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+            mainContent.style.display = 'block';
+        }, 5000); // Adjust the time if needed
+    });
     </script>
 </body>
 </html>
